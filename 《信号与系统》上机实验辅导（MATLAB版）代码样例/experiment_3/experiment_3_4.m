@@ -1,0 +1,17 @@
+clear all;
+close all;
+clc;
+fs=1000;
+t=-2.5:1/fs:2.5;
+x=exp(-2*abs(t));
+y=conv(double(x),double(x))/fs;
+len=length(y);
+tt=(0:len-1)/fs-2.2;
+subplot(2,1,1);
+plot(t,x);
+grid on;
+title('x(t)');
+subplot(2,1,2);
+plot(tt,y);
+grid on;
+title('y(t)=x(t)*x(t))');

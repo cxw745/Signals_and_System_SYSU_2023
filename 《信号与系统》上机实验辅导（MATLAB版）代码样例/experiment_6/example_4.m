@@ -1,0 +1,13 @@
+clear all;
+close all;
+clc;
+b=[1,-1];
+a=[1,2,2];
+z=roots(b);
+p=roots(a);
+plot(real(z),imag(z),'o');
+hold on;
+plot(real(p),imag(p),'x');
+hold on;
+axis([-2,2,-2,2]);
+grid on;

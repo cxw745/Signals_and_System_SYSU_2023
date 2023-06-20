@@ -1,0 +1,17 @@
+clear all;
+close all;
+clc;
+syms t;
+Xw=fourier(3*exp(-1*abs(t)));
+figure(1);
+subplot(2,1,1);
+ezplot(Xw);
+grid on;
+t=-2.5:0.01:2.5;
+xt=3*exp(-1*abs(t));
+xt=subs(xt,'t',t);
+subplot(2,1,2);
+plot(t,xt);
+xlabel('t');
+title('x(t)');
+grid on;

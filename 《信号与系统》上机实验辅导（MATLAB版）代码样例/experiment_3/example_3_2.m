@@ -1,0 +1,15 @@
+clear all;
+close all;
+clc;
+syms t w;
+xt=ifourier(4/(4+w^2),t);
+subplot(2,1,1);
+ezplot(xt);
+grid on;
+w=-6:0.1:6;
+Xw=4./(4+w.^2);
+subplot(2,1,2);
+plot(w,Xw);
+xlabel('w');
+title('Xw');
+grid on;
